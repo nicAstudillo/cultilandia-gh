@@ -1,0 +1,290 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+/*display flex del index*/
+@media screen and (min-width: 768px) {
+    
+}.indexCuerpo {
+    width: 100%;
+    height: 100vh;
+    background-color: #000001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.indexContenido {
+    display: flex;
+    flex-direction: column;
+    background-color: #2f6344;
+    align-items: center;
+}
+
+.indexHome {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.indexForm {
+    width: 100%;
+}
+
+/*display grid del cuerpo*/
+.cuerpo {
+    width: 100%;
+    height: 100vh;
+    background-color: #2f6344;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 6fr 6fr 1fr;
+    grid-template-areas:
+        "header     header"
+        "productos     notas"
+        "formulario    formulario"
+        "pie           pie"
+}
+
+/*display grid del header*/
+.header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    background-color: #000001;
+    flex-direction: row;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navHome {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navSeccion {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.pages {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.pagesA {
+    font-family: cursive;
+    color: #00ff95;
+}
+
+/*contenido grid*/
+.contenido {
+    grid-area: productos;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.productos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.notas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.formulario {
+    grid-area: formulario;
+    width: 100%;
+    display: flex;
+}
+.imagen {
+    width: 15%; 
+    display: flex;
+    flex-direction: row;
+}
+.formulario {
+    grid-area: formulario;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pregunta {
+    display: block;
+}
+
+.boton {
+    display: inline;
+}
+
+.input {
+    display: inline-block;
+}
+
+/*Contenido flex*/
+
+.pregunta {
+    display: block;
+}
+
+.boton {
+    display: inline;
+}
+
+.input {
+    display: inline-block;
+}
+
+/*footer flex*/
+.pie {
+    grid-area: pie;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #000001;
+}
+
+.pieRedes {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.imagenRed {
+    width: 15%;
+}
+
+.redText {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #00ff95;
+}
+
+/* css de la tienda */
+.ventas {
+    width: 100%;
+    display: flex;
+    background-color: #2f6344;
+    flex-wrap: wrap;
+}
+
+.articulo {
+    width: 120px;
+    display: inline-block;
+}
+
+.tienda {
+    width: 100%;
+    display: flex;
+}
+
+.apuntes {
+    display: flex;
+}
+
+/* media querie mobile*/ /*HEADER*/
+@media screen and (min-width:380px) {
+    .cuerpo {
+    width: 100%;
+    height: 100vh;
+    background-color: #2f6344;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 6fr 6fr 2fr;
+    grid-template-areas:
+        "header     header"
+        "contenido     contenido"
+        "formulario    formulario"
+        "pie           pie"
+}
+    .header {
+        grid-area: header;
+        width: 100%;
+        display: flex;
+        background-color: #000001;
+        flex-direction: row;    
+    }
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .navSeccion {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .pie {
+        grid-area: pie;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #000001;
+    }
+    
+    .pieRedes {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .redText {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        color: #00ff95;
+    }
+}
+@media screen and (min-width:1200px) {
+    .contenido {
+        grid-area: productos;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .productos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .notas {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    
+    }
+        .pie {
+        grid-area: pie;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: #000001;
+    }
+    
+    .pieRedes {
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+    }
+}
