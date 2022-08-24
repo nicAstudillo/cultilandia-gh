@@ -24,15 +24,25 @@
 }
 
 .home {
+    --text: #ffffff;
+    --red: #d12229;
+    --orange: #f68a1e;
+    --yellow: #fde01a;
+    --green: #007940;
+    --blue: #24408e;
+    --purple: #732982;
+    --font: "Lobster";
+    color: var(--text);
+    font-size: 50px;
     font-family: var(--font);
-    text-shadow: 10px 10px 2px #b42a00, 
-                 15px 15px 2px #0fe0c4d2,
-		         20px 20px 2px #a02585;
-    width: 320px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-weight: 900;
+    font-kerning: normal;
+    text-shadow: 10px 10px 2px var(--red), 
+                 15px 15px 2px var(--orange), 
+                 20px 20px 2px var(--yellow), 
+                 25px 25px 2px var(--green), 
+                 30px 30px 2px var(--blue), 
+                 35px 35px 2px var(--purple);
 }
 
 .indexForm {
