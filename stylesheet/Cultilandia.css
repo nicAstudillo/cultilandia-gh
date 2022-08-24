@@ -4,10 +4,8 @@
     box-sizing: border-box;
 }
 
-/*display flex del index*/
-@media screen and (min-width: 768px) {
-    
-}.indexCuerpo {
+/*display flex del index*/    
+.indexCuerpo {
     width: 100%;
     height: 100vh;
     background-color: #000001;
@@ -22,7 +20,10 @@
     background-color: #00ad74;
     align-items: center;
 }
-
+.indexForm {
+    width: 100%;
+}
+/*Css del header*/
 .home {
     --text: #ffffff;
     --red: #d12229;
@@ -44,27 +45,6 @@
                  30px 30px 2px var(--blue), 
                  35px 35px 2px var(--purple);
 }
-
-.indexForm {
-    width: 100%;
-}
-
-/*display grid del cuerpo*/
-.cuerpo {
-    width: 100%;
-    height: 100vh;
-    background-color: #2f6344;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 6fr 6fr 1fr;
-    grid-template-areas:
-        "header     header"
-        "productos     notas"
-        "formulario    formulario"
-        "pie           pie"
-}
-
-/*display grid del header*/
 .header {
     grid-area: header;
     width: 100%;
@@ -75,7 +55,22 @@
 .navbar {
     background-color: #000001;
     width: 70%;
-    
+
+}
+/*display grid del cuerpo*/
+@media screen and (min-width:380px) {
+    .cuerpo {
+    width: 100%;
+    height: 100vh;
+    background-color: #2f6344;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 6fr 6fr 2fr;
+    grid-template-areas:
+        "header     header"
+        "contenido     contenido"
+        "formulario    formulario"
+        "pie           pie"
 }
 /*contenido grid*/
 .productos {
@@ -90,23 +85,10 @@
     flex-direction: row;
 
 }
-
-.formulario {
-    grid-area: formulario;
-    width: 100%;
-    display: flex;
-}
 .imagen {
     width: 15%; 
     display: flex;
     flex-direction: row;
-}
-.formulario {
-    grid-area: formulario;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .pregunta {
     display: block;
@@ -181,41 +163,6 @@
     display: flex;
 }
 
-/* media querie mobile*/ /*HEADER*/
-@media screen and (min-width:380px) {
-    .cuerpo {
-    width: 100%;
-    height: 100vh;
-    background-color: #2f6344;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 6fr 6fr 2fr;
-    grid-template-areas:
-        "header     header"
-        "contenido     contenido"
-        "formulario    formulario"
-        "pie           pie"
-}
-    .header {
-        grid-area: header;
-        width: 100%;
-        display: flex;
-        background-color: #000001;
-        flex-direction: row;    
-    }
-    .nav {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-    .navSeccion {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        justify-content: center;
-        align-items: center;
-    }
     .pie {
         grid-area: pie;
         width: 100%;
@@ -237,35 +184,4 @@
         color: #00ff95;
     }
 }
-@media screen and (min-width:1200px) {
-    .contenido {
-        grid-area: productos;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-    .productos {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-    .notas {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    
-    }
-        .pie {
-        grid-area: pie;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        background-color: #000001;
-    }
-    
-    .pieRedes {
-        width: 25%;
-        display: flex;
-        flex-direction: row;
-    }
-}
+
