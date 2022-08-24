@@ -106,13 +106,8 @@
 }
 
 /*contenido grid*/
-.contenido {
-    grid-area: productos;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
 .productos {
+    grid-area: productos;
     width: 100%;
     display: flex;
     flex-direction: row;
