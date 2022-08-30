@@ -3,49 +3,6 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
-/*display flex del index*/    
-@media screen and (min-width:380px) {
-.indexCuerpo {
-    width: 100%;
-    height: 100vh;
-    background-color: #000001;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.indexContenido {
-    display: flex;
-    flex-direction: column;
-    background-color: #000001;
-    align-items: center;
-}
-.indexTextForm {
-    color: #00ff95;
-}
-.cuerpo  { 
-width: 100%;
-height: 100vh;
-background-color: #2f6344;
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(13, 1fr);
-grid-template-areas:
-    "header"
-    "header"
-    "productos"
-    "productos"
-    "productos"
-    "notas"
-    "notas"
-    "notas"
-    "formulario"
-    "formulario"
-    "formulario"
-    "pie"
-    "pie";
-}
 .home {
     margin-bottom: 0;
     --text: #ffffff;
@@ -68,122 +25,91 @@ grid-template-areas:
                  30px 30px 2px var(--blue), 
                  35px 35px 2px var(--purple);
 }
-.header {
-    grid-area: header;
-    width: 100%;
-    display: flex;
-    background-color: #000001;
-    flex-direction: column;
-}
-.navbar {
-    padding: 0;
-    background-color: #000001;
-    width: 100%;
-    display: flex;
 
-}
-/*contenido grid*/
-.productos {
-    grid-area: productos;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 110px;
-}
-.cardImage {
-    width: 25%;
-}
-.notas {
-    grid-area: notas;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 110px;
-
-}
-.pregunta {
-    display: block;
-}
-
-.boton {
-    display: inline;
-}
-
-.input {
-    display: inline-block;
-}
-
-/*Contenido flex*/
-
-.pregunta {
-    display: block;
-}
-
-.boton {
-    display: inline;
-}
-
-.input {
-    display: inline-block;
-}
-
-/*footer flex*/
-.pie {
-    grid-area: pie;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #000001;
-}
-
-.pieRedes {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-}
-.imagenRed {
-    width: 15%;
-}
-/* css de la tienda */
-.ventas {
-    width: 100%;
-    display: flex;
-    background-color: #2f6344;
-    flex-wrap: wrap;
-}
-
-.articulo {
-    width: 120px;
-    display: inline-block;
-}
-
-.tienda {
-    width: 100%;
-    display: flex;
-}
-
-.apuntes {
-    display: flex;
-}
-
-    .pie {
-        grid-area: pie;
+@media screen and (max-width:1023px) {
+    .indexCuerpo {
         width: 100%;
+        height: 100vh;
+        background-color: #000001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .indexContenido {
         display: flex;
         flex-direction: column;
         background-color: #000001;
+        align-items: center;
     }
-    
-    .pieRedes {
-        width: 25%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .redText {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
+    .indexTextForm {
         color: #00ff95;
-    } 
- }
+    }
+                /* cultilandia*/
+    .cuerpo {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-area: "header header header header header header header header header header header header"
+                   "header header header header header header header header header header header header"
+                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+                   "form   form   form   form   form   form   form   form   form   form   form   form"
+                   "form   form   form   form   form   form   form   form   form   form   form   form"
+                   "form   form   form   form   form   form   form   form   form   form   form   form"
+                   "form   form   form   form   form   form   form   form   form   form   form   form"
+                   "footer footer footer footer footer footer footer footer footer footer footer footer"
+                   "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+    }
+
+    /*css para desktop*/
+    @media screen and (min-width:1024px) {
+        .header {
+            display: flex;
+            flex-direction: row;
+        }
+        .indexCuerpo {
+            width: 100%;
+            height: 100vh;
+            background-color: #000001;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .indexContenido {
+            display: flex;
+            flex-direction: column;
+            background-color: #000001;
+            align-items: center;
+        }
+        .indexTextForm {
+            color: #00ff95;
+        }.home {
+            margin-bottom: 0;
+            --text: #ffffff;
+            --red: #d12229;
+            --orange: #f68a1e;
+            --yellow: #fde01a;
+            --green: #007940;
+            --blue: #24408e;
+            --purple: #732982;
+            --font: "Lobster";
+            color: var(--text);
+            font-size: 50px;
+            font-family: var(--font);
+            font-weight: 900;
+            font-kerning: normal;
+            text-shadow: 10px 10px 2px var(--red), 
+                         15px 15px 2px var(--orange), 
+                         20px 20px 2px var(--yellow), 
+                         25px 25px 2px var(--green), 
+                         30px 30px 2px var(--blue), 
+                         35px 35px 2px var(--purple);
+        }
+         }
