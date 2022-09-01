@@ -3,11 +3,179 @@
     padding: 0%;
     box-sizing: border-box;
 }
-    .home {
+
+.home {
+    width: 100%;
+    height: 50%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 0;
+    --text: #ffffff;
+    --red: #d12229;
+    --orange: #f68a1e;
+    --yellow: #fde01a;
+    --green: #007940;
+    --blue: #24408e;
+    --purple: #732982;
+    --font: "Lobster";
+    color: var(--text);
+    font-size: 50px;
+    font-family: var(--font);
+    font-weight: 900;
+    font-kerning: normal;
+    text-shadow: 2px 5px 0px var(--red),
+        14px 8px 0px var(--yellow),
+        18px 14px 0px var(--green),
+        24px 18px 0px var(--blue),
+        29px 24px 0px var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ;
+}
+
+@media screen and (max-width:1023px) {
+    .indexCuerpo {
         width: 100%;
-        height: 50%;
-        margin-block-start: 0;
-        margin-block-end: 0;
+        height: 100vh;
+        background-color: #000001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexContenido {
+        display: flex;
+        flex-direction: column;
+        background-color: #000001;
+        align-items: center;
+    }
+
+    .indexTextForm {
+        color: #00ff95;
+    }
+
+    /* cultilandia*/
+    .cuerpo {
+        background-color: #000001;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-areas: "header header header header header header header header header header header header"
+            "header header header header header header header header header header header header"
+            "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+            "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+            "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+            "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
+            "form   form   form   form   form   form   form   form   form   form   form   form"
+            "form   form   form   form   form   form   form   form   form   form   form   form"
+            "form   form   form   form   form   form   form   form   form   form   form   form"
+            "form   form   form   form   form   form   form   form   form   form   form   form"
+            "footer footer footer footer footer footer footer footer footer footer footer footer"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+
+    .header {
+        grid-area: header;
+        margin: 0;
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .notas {
+        grid-area: notas;
+    }
+
+
+    /*FORM*/
+    .form {
+        grid-area: form;
+    }
+
+    /*FOOTER*/
+    .footer {
+        grid-area: footer;
+        display: flex;
+    }
+
+    .imagenRed {
+        vertical-align: middle;
+        border-style: none;
+        display: flex;
+        width: 45%;
+    }
+
+    /*ESTILOS DE LAS DEMAS SECCIONES*/
+    .cuerpoPage {
+        background-color: #000001;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-areas: 
+            "header header header header header header header header header header header header"
+            "header header header header header header header header header header header header"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "card  card  card  card  card  card  card  card  card  card  card  card"
+            "footer footer footer footer footer footer footer footer footer footer footer footer"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+    }
+    .fila {
+        display: flex;
+        grid-area: card;
+    }
+    .productos {
+        grid-area: card;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*css para desktop*/
+@media screen and (min-width:1025px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .indexCuerpo {
+        width: 100%;
+        height: 100vh;
+        background-color: #000001;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexContenido {
+        display: flex;
+        flex-direction: column;
+        background-color: #000001;
+        align-items: center;
+    }
+
+    .indexTextForm {
+        color: #00ff95;
+    }
+
+    .home {
         margin-bottom: 0;
         --text: #ffffff;
         --red: #d12229;
@@ -22,126 +190,11 @@
         font-family: var(--font);
         font-weight: 900;
         font-kerning: normal;
-        text-shadow: 2px 5px 0px var(--red), 
-                     14px 8px 0px var(--yellow), 
-                     18px 14px 0px var(--green), 
-                     24px 18px 0px var(--blue), 
-                     29px 24px 0px var(--purple);
-        display: flex;
-        align-items: center;
-        justify-content: center;;
+        text-shadow: 10px 10px 2px var(--red),
+            15px 15px 2px var(--orange),
+            20px 20px 2px var(--yellow),
+            25px 25px 2px var(--green),
+            30px 30px 2px var(--blue),
+            35px 35px 2px var(--purple);
+    }
 }
-
-@media screen and (max-width:1023px) {
-    .indexCuerpo {
-        width: 100%;
-        height: 100vh;
-        background-color: #000001;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .indexContenido {
-        display: flex;
-        flex-direction: column;
-        background-color: #000001;
-        align-items: center;
-    }
-    .indexTextForm {
-        color: #00ff95;
-    }
-                /* cultilandia*/
-    .cuerpo {
-        background-color: #000001;
-        width: 100%;
-        height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(12, 1fr);
-        grid-template-areas: "header header header header header header header header header header header header"
-                   "header header header header header header header header header header header header"
-                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
-                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
-                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
-                   "notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas  notas"
-                   "form   form   form   form   form   form   form   form   form   form   form   form"
-                   "form   form   form   form   form   form   form   form   form   form   form   form"
-                   "form   form   form   form   form   form   form   form   form   form   form   form"
-                   "form   form   form   form   form   form   form   form   form   form   form   form"
-                   "footer footer footer footer footer footer footer footer footer footer footer footer"
-                   "footer footer footer footer footer footer footer footer footer footer footer footer";
-    }
-    .header { 
-        grid-area: header;
-        margin: 0;
-        border: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .notas {
-        grid-area: notas;
-    }
-    .form {
-        grid-area: form;
-    }
-    .footer {
-        grid-area: footer;
-        display: flex;
-    }
-    .imagenRed  {
-        vertical-align: middle;
-        border-style: none;
-        display: flex;
-        width: 45%;
-    }
-    }
-    /*css para desktop*/
-    @media screen and (min-width:1025px) {
-        .header {
-            display: flex;
-            flex-direction: row;
-        }
-        .indexCuerpo {
-            width: 100%;
-            height: 100vh;
-            background-color: #000001;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .indexContenido {
-            display: flex;
-            flex-direction: column;
-            background-color: #000001;
-            align-items: center;
-        }
-        .indexTextForm {
-            color: #00ff95;
-        }
-        .home {
-            margin-bottom: 0;
-            --text: #ffffff;
-            --red: #d12229;
-            --orange: #f68a1e;
-            --yellow: #fde01a;
-            --green: #007940;
-            --blue: #24408e;
-            --purple: #732982;
-            --font: "Lobster";
-            color: var(--text);
-            font-size: 50px;
-            font-family: var(--font);
-            font-weight: 900;
-            font-kerning: normal;
-            text-shadow: 10px 10px 2px var(--red), 
-                         15px 15px 2px var(--orange), 
-                         20px 20px 2px var(--yellow), 
-                         25px 25px 2px var(--green), 
-                         30px 30px 2px var(--blue), 
-                         35px 35px 2px var(--purple);
-        }
-     }
