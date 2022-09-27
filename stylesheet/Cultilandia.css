@@ -40,6 +40,14 @@
 .form {
     display: flex;
 }
+.cuerpo {
+    background-color: #000001;
+}
+.titulo {
+    display: flex;
+    color:#007940;
+    justify-content: center;
+}
 .footer {
     background-color: #000001;
     display: flex;
